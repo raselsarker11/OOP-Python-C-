@@ -1,25 +1,27 @@
-class Car:
-    num_cars = 0
-
-    def __init__(self, make, model):
-        self.make = make
-        self.model = model
+class phone:
+    def message(self):
+        print("I am inside message")
         
-        Car.num_cars += 1 # Incrementing the class attribute
+class laptop(phone):
+    def browser(self):
+        print("I am inside laptop browser")
+        
+class computer(phone):
+    def intel(self):
+        print("I am inside intel computer")
+        
+# class headphone(laptop):
+#     def smartphone(self):
+#         print("I am inside smartphone device")
+        
+class desktop(laptop, computer):    
+    def programing(self):
+        print("I am inside programing laptop and computer")
+        
 
-    def display_info(self):
-        print(f"Make: {self.make}, Model: {self.model}")
+d = desktop()  
+d.browser()    
+d.message()    
+d.programing()    
+d.intel() 
 
-    @classmethod
-    def display_num_cars(cls):
-        print(f"Number of cars: {cls.num_cars}")
-
-
-
-car1 = Car("Toyota", "Corolla")
-car2 = Car("Tesla", "Model S")
-
-
-car1.display_info()  
-car2.display_info() 
-Car.display_num_cars() 

@@ -1,0 +1,1 @@
+Inheritance is a method in which the properties of one class
